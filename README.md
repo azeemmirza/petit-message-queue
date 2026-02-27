@@ -14,8 +14,6 @@ MMQ is motivated by building a small, practical queue from scratch to deeply und
 - what guarantees are realistic (and what tradeoffs come with them)
 - how storage and recovery influence correctness
 
----
-
 ## How It Works
 
 ### Message Lifecycle
@@ -33,8 +31,6 @@ MMQ provides **at-least-once delivery**:
 - a message will be delivered one or more times until it is acknowledged
 - duplicates are possible (e.g., consumer crash after processing but before ack)
 - consumers should be idempotent when processing messages
-
----
 
 ## Technical Specification
 
@@ -62,8 +58,6 @@ MMQ is designed with a clear separation of concerns:
   - HTTP adapter maps requests to core engine commands
   - gRPC adapter (optional) exposes the same engine capabilities via RPC
 
----
-
 ## License
 
-MIT
+This project is licensed under the [MIT License](./LICENSE).
